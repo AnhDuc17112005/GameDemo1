@@ -3,7 +3,7 @@
 public class PlayerShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    public float fireRate = 0.2f;   // 0.2s = 5 viên/giây
+    public float fireRate = 0.2f;   
     public float bulletOffsetY = 1.2f;
 
     private float timer;
@@ -12,7 +12,7 @@ public class PlayerShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        // Bắn khi giữ chuột trái
+        // Bắn liên tục khi giữ chuột trái
         if (Input.GetMouseButton(0) && timer >= fireRate)
         {
             Shoot();
