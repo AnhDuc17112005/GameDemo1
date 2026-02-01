@@ -10,6 +10,9 @@ public class PlayerShooting : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance != null && GameManager.Instance.isGameOver)
+            return;
+
         timer += Time.deltaTime;
 
         // Bắn liên tục khi giữ chuột trái

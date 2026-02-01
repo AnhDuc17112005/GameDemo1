@@ -2,12 +2,21 @@
 
 public class BulletHit : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public GameObject enemyExplosionPrefab;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject); // diệt enemy
-            Destroy(gameObject);       // diệt bullet
+            // tạo hiệu ứng nổ
+            Instantiate(enemyExplosionPrefab, other.transform.position, Quaternion.identity);
+
+            GameManager.Instance.AddScore(10);
+            // huỷ enemy
+            Destroy(other.gameObject);
+
+            // huỷ đạn
+            Destroy(gameObject);
         }
     }
 }

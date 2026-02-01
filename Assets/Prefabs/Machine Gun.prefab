@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4871213052536649500}
   - component: {fileID: 9029658499430129209}
   - component: {fileID: 8549113342030187797}
+  - component: {fileID: 5520045360642130830}
   m_Layer: 0
   m_Name: Machine Gun
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2be03216cebb448a81942a72d82f04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletHit
+  enemyExplosionPrefab: {fileID: 6461973659460925623, guid: 1cb4aa5dba1ae7e4cac53314acb0471d,
+    type: 3}
 --- !u!61 &8549113342030187797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -165,3 +168,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.45, y: 1.1}
   m_EdgeRadius: 0
+--- !u!50 &5520045360642130830
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015001729147605694}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0

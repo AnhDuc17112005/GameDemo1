@@ -2,19 +2,19 @@
 
 public class PlayerHit : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public GameObject playerExplosionPrefab;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Enemy")) return;
 
-        Debug.Log("GAME OVER");
+        // Nổ player
+        Instantiate(playerExplosionPrefab, transform.position, Quaternion.identity);
 
-        // Tắt điều khiển
-        var move = GetComponent<PlayerMovement>();
-        if (move) move.enabled = false;
+        // GỌI GAME OVER
+        GameManager.Instance.GameOver();
 
-        var shoot = GetComponent<PlayerShooting>();
-        if (shoot) shoot.enabled = false;
-
-        Time.timeScale = 0f;
+        // Ẩn player
+        gameObject.SetActive(false);
     }
 }
