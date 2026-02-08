@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1834842007984201221}
   - component: {fileID: 3156653326884829181}
+  - component: {fileID: 8225727004208240300}
   - component: {fileID: 5189350098537448856}
+  - component: {fileID: 7790178562941187265}
   - component: {fileID: 5196385723270523433}
   - component: {fileID: 8479803875293282778}
   m_Layer: 0
@@ -94,6 +96,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &8225727004208240300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6357225602332947127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f580ffc81da72324fa65a0b911b8f3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  health: {fileID: 7790178562941187265}
+  damage: 1
 --- !u!61 &5189350098537448856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,6 +156,22 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.024, y: 1.024}
   m_EdgeRadius: 0
+--- !u!114 &7790178562941187265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6357225602332947127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b354d982349ffa14498bfe69ebda502f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  explosionPrefab: {fileID: 6461973659460925623, guid: 1cb4aa5dba1ae7e4cac53314acb0471d,
+    type: 3}
+  defaultHealthPoint: 2
+  scoreWhenDie: 10
 --- !u!50 &5196385723270523433
 Rigidbody2D:
   serializedVersion: 5

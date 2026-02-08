@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1828820032695442541}
   - component: {fileID: 6168172190645162498}
   - component: {fileID: 4871213052536649500}
-  - component: {fileID: 9029658499430129209}
   - component: {fileID: 8549113342030187797}
+  - component: {fileID: -217836431920266375}
   - component: {fileID: 5520045360642130830}
   m_Layer: 0
   m_Name: Machine Gun
@@ -108,20 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletMovement
   speed: 12
---- !u!114 &9029658499430129209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5015001729147605694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2be03216cebb448a81942a72d82f04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BulletHit
-  enemyExplosionPrefab: {fileID: 6461973659460925623, guid: 1cb4aa5dba1ae7e4cac53314acb0471d,
-    type: 3}
 --- !u!61 &8549113342030187797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -168,6 +154,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.45, y: 1.1}
   m_EdgeRadius: 0
+--- !u!114 &-217836431920266375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5015001729147605694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af9c0f43026840149912afffbc0ff254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletDamage
+  damage: 1
 --- !u!50 &5520045360642130830
 Rigidbody2D:
   serializedVersion: 5
